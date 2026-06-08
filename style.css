@@ -1,6 +1,6 @@
-/* ===== Design Tokens (Figma se exact values yahan badal lena) ===== */
+/* ===== Design Tokens ===== */
 :root {
-  --orange: #f4511e;      /* JBL vivid red-orange — Figma ka exact hex confirm karke daalo */
+  --orange: #f4511e;
   --orange-dark: #d8400f;
   --black: #0c0c0e;
   --dark: #141417;
