@@ -1,0 +1,276 @@
+/* ===== Design Tokens (Figma se exact values yahan badal lena) ===== */
+:root {
+  --orange: #f4511e;      /* JBL vivid red-orange — Figma ka exact hex confirm karke daalo */
+  --orange-dark: #d8400f;
+  --black: #0c0c0e;
+  --dark: #141417;
+  --gray: #9a9aa0;
+  --white: #ffffff;
+  --radius: 12px;
+  --max-width: 1180px;
+  --font: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.accent { color: var(--orange); }
+.eyebrow {
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: .8rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: .5px;
+  border: none;
+  border-radius: 4px;
+  padding: 13px 30px;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--orange); color: #fff; }
+.btn-primary:hover { background: var(--orange-dark); }
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(12,12,14,.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  text-decoration: none;
+}
+.logo span { color: var(--orange); }
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+  color: #e4e4e4;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: .5px;
+  transition: color .2s ease;
+}
+.nav-links a:hover { color: var(--orange); }
+
+.nav-icons { display: flex; gap: 16px; font-size: 1.1rem; }
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none; border: none; cursor: pointer;
+}
+.menu-toggle span { width: 26px; height: 3px; background: #fff; border-radius: 2px; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  background:
+    radial-gradient(circle at 75% 30%, rgba(244,81,30,.22), transparent 50%),
+    linear-gradient(135deg, #1a1430, #0c0c0e 60%);
+  padding: 80px 0 130px;
+  overflow: hidden;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.hero-text h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+.hero-sub {
+  color: var(--gray);
+  font-size: 1.05rem;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  box-shadow: 0 30px 70px rgba(0,0,0,.55);
+}
+
+/* ===== ABOUT — Find Your Sound ===== */
+.about {
+  background: var(--black);
+  padding: 90px 0;
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 55px;
+}
+.about-text h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+.about-text p { color: var(--gray); max-width: 460px; margin-bottom: 28px; }
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+/* ===== Our History (orange block) ===== */
+.history {
+  position: relative;
+  background: var(--orange);
+  padding: 120px 0 70px;
+}
+/* signature wavy top divider (black curve coming down from section above) */
+.history .wave {
+  position: absolute;
+  top: -1px; left: 0;
+  width: 100%; height: 110px;
+  fill: var(--black);
+}
+.section-head { text-align: center; margin-bottom: 40px; }
+.section-head h3 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.muted-light { color: rgba(255,255,255,.85); font-weight: 600; letter-spacing: 2px; }
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.history-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 4px solid rgba(0,0,0,.15);
+}
+.history-text {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(255,255,255,.95);
+  font-size: 1.05rem;
+}
+
+/* ===== What We Offer ===== */
+.offer {
+  background: var(--dark);
+  padding: 90px 0;
+}
+.offer-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+.offer-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.offer-text h3 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.offer-points { list-style: none; margin-bottom: 30px; }
+.offer-points li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 14px;
+  color: #ddd;
+  font-size: 1.05rem;
+}
+.offer-points li::before {
+  content: "✓";
+  position: absolute; left: 0;
+  color: var(--orange);
+  font-weight: 900;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 880px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--dark);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  .nav-links.open { max-height: 360px; }
+  .nav-links a { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .nav-icons { display: none; }
+  .menu-toggle { display: flex; }
+
+  .hero-inner,
+  .about-inner,
+  .offer-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero-image,
+  .about-image { order: -1; }
+  .offer-image { order: -1; }
+  .history-grid { grid-template-columns: 1fr; }
+  .history-grid img { height: 200px; }
+}
+
+@media (max-width: 460px) {
+  .btn { width: 100%; }
+  .hero { padding-bottom: 90px; }
+}
