@@ -98,25 +98,36 @@ ul { list-style: none; }
 .menu-toggle span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all .3s; }
 
 /* ===== HERO ===== */
-.hero { position: relative; min-height: 88vh; background: #0a0812; overflow: hidden; display: flex; align-items: center; }
+.hero { position: relative; min-height: 88vh; background: #070212; overflow: hidden; display: flex; align-items: center; }
 
 /* Orange wave blobs */
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
 .hw1 {
-  position: absolute; width: 700px; height: 700px;
-  background: radial-gradient(ellipse, rgba(255,60,0,.55) 0%, transparent 70%);
-  bottom: -200px; right: -100px; border-radius: 50%;
-  transform: rotate(-20deg);
+  position: absolute; width: 1100px; height: 950px;
+  background: radial-gradient(ellipse, rgba(255,50,0,.92) 0%, rgba(220,35,0,.55) 22%, rgba(160,15,0,.18) 52%, transparent 68%);
+  top: -420px; left: -80px;
+  border-radius: 50%;
 }
 .hw2 {
-  position: absolute; width: 500px; height: 400px;
-  background: radial-gradient(ellipse, rgba(255,91,28,.4) 0%, transparent 70%);
-  top: -100px; right: 150px; border-radius: 50%;
+  position: absolute; width: 750px; height: 600px;
+  background: radial-gradient(ellipse, rgba(255,110,20,.7) 0%, rgba(200,70,0,.32) 38%, transparent 65%);
+  top: -60px; right: 80px;
+  border-radius: 50%;
 }
 .hw3 {
-  position: absolute; width: 400px; height: 600px;
-  background: radial-gradient(ellipse, rgba(120,20,180,.25) 0%, transparent 70%);
-  top: 0; right: 30%; pointer-events: none;
+  position: absolute; width: 680px; height: 950px;
+  background: radial-gradient(ellipse, rgba(110,0,220,.6) 0%, rgba(80,0,180,.28) 38%, transparent 65%);
+  bottom: -250px; right: -120px;
+}
+.hw4 {
+  position: absolute; width: 550px; height: 480px;
+  background: radial-gradient(ellipse, rgba(255,80,0,.32) 0%, transparent 65%);
+  bottom: -80px; left: 150px;
+  border-radius: 50%;
+}
+.hero-waves {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none;
 }
 
 .hero-inner {
